@@ -1,9 +1,18 @@
 import { ADD_TASK, DELETE_TASK, EDIT_TASK, TOGGLE_TASK } from './actions';
 
+// Initial state with tasks loaded from localStorage if available
 const initialState = {
   tasks: JSON.parse(localStorage.getItem('tasks')) || [],
 };
 
+/**
+ * Root reducer for the application
+ * Handles all task-related actions and updates the state accordingly
+ * 
+ * @param {Object} state - The current state
+ * @param {Object} action - The dispatched action
+ * @returns {Object} The new state
+ */
 const rootReducer = (state = initialState, action) => {
   let newTasks;
   switch (action.type) {
@@ -26,6 +35,7 @@ const rootReducer = (state = initialState, action) => {
     default:
       return state;
   }
+  // Save updated tasks to localStorage
   localStorage.setItem('tasks', JSON.stringify(newTasks));
   return { ...state, tasks: newTasks };
 };
