@@ -5,6 +5,12 @@ import TaskInput from './components/TaskInput';
 import TaskList from './components/TaskList';
 import './styles/App.css';
 
+/**
+ * App Component
+ * 
+ * This is the root component of the application.
+ * It wraps the entire app with the Redux Provider and renders the main structure.
+ */
 function App() {
   return (
     <Provider store={store}>
