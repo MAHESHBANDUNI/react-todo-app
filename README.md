@@ -28,7 +28,7 @@ https://github.com/MAHESHBANDUNI/react-todo-app.git
 2. Navigate to the project directory:
 cd react-todo-app
 
-3. Install the dependencies:
+4. Install the dependencies:
 npm install
 
 ## Using React Todo Application
